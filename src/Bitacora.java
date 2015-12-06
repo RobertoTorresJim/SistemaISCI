@@ -32,18 +32,23 @@ public class Bitacora {
 		seguimientos.add(primerSeguimiento);
 	}
 	/**
-	 * Función de tipo boolean que agrega un nuevo seguimiento a la bitacora de la orden 
-	 * recibe como parametros la observacion a agregar 
-	 * @param nuevoSeguimiento
-	 * @return TRUE si el seguimiento fue agregado exitosamente FALSE en otro caso
+	 * Método set de orden que permite asignar una orden a la nueva vitacora
+	 * NOTA: NO UTILIZADO SE ASIGNA LA ORDEN AL CREAR LA BITACORA POR
+	 * MEDIO DEL CONSTRUCTOR
+	 * Recibe una orden 
+	 * @param orden
 	 */
-		public boolean addSeguimiento(String nuevoSeguimiento){
-			//Se crea un nuevo seguimiento
-			Seguimiento seguimiento = new Seguimiento(nuevoSeguimiento);
-			//Se actualiza la nueva fecha de seguimiento
-			UltimaFechaSeguimiento = seguimiento.fechaSeguimiento;
-			//Se añade una nueva observacion a la lista
-			return seguimientos.add(seguimiento);
+	public void setOrden(Orden orden){
+		this.orden = orden;
 	}
-		
+	/**
+	 * Método que asigna una nueva fecha de seguimiento de acuerdo a  
+	 * la actualización del seguimeinto en la bitacora 
+	 * @param fechaSeguimiento
+	 */
+	public void setFechaSeguimiento(Date fechaSeguimiento){
+		UltimaFechaSeguimiento = fechaSeguimiento;
+	}
+	
+	
 }

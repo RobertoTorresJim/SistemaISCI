@@ -10,7 +10,8 @@ public class ControlBitacora {
 		ventanaB = new VentanaBitacora(this);
 		ventanaB.setVisible(true);
 	}
+	//Verificar si este metodo pertenece al control o a la bitacora
 	public boolean agregarSeguimiento(){
-		
+		return true;
 	}
 }
